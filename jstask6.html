@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .container {
+        position: relative;
+        top: 20px;
+        height: 350px;
+        width: 350px;
+        border: 1px solid black;
+        margin-left: auto;
+      }
+      .heading {
+        font-family: "Lobster Two", cursive;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        font-size: 4rem;
+        font-weight: 100;
+        margin-top: 27px;
+      }
+      .btn {
+        width: 320px;
+      }
+      .outer {
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="container">
+        <div class="heading">
+          <h4 class="">Instagram</h4>
+        </div>
+        <form>
+          <tr>
+            <td>
+              <label
+                class="form-label fw-bold mt-2"
+                placeholder="Username"
+              ></label>
+            </td>
+            <td>
+              <div class="input-group has-validation">
+                <span class="input-group-text mb-1 mt-2" id="inputGroupPrepend"
+                  >&#xf2bd;</span
+                >
+                <input
+                  placeholder="Username"
+                  type="text"
+                  class="form-control mb-1 mt-2"
+                  id="validationCustomUsername"
+                  aria-describedby="inputGroupPrepend"
+                  required="True"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="form-label fw-bold mb-1 mt-1"></label>
+            </td>
+            <td>
+              <div class="input-group has-validation">
+                <span class="input-group-text mb-4 mt-1" id="inputGroupPrepend"
+                  >&#128274;</span
+                >
+                <input
+                  placeholder="Password"
+                  type="text"
+                  class="form-control mb-4 mt-1"
+                  id="validationCustomUsername"
+                  aria-describedby="inputGroupPrepend"
+                  required="True"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <button class="btn btn-primary" width="100%">Log in</button>
+          </tr>
+          <br />
+          <tr>
+            <input class="mt-4" type="checkbox" />
+            Remember me
+
+            <a class="ms-5 text-decoration-none" href="#">Forgot Password?</a>
+          </tr>
+        </form>
+      </div>
+      <p class="ms-5 mt-4">
+        Don't have an account!
+        <a class="text-decoration-none" href="#"> Sign up here</a>
+      </p>
+    </div>
+  </body>
+</html>

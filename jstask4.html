@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      #showTimeButton,
+      #showDateButton {
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="showDateButton">Show Date</button>
+    <div id="output1"></div>
+    <button id="showTimeButton">Show Time</button>
+    <div id="output"></div>
+
+    <script>
+      // Get references to the buttons and output div
+      const showDateButton = document.getElementById("showDateButton");
+      const outputDiv2 = document.getElementById("output1");
+      const showTimeButton = document.getElementById("showTimeButton");
+      const outputDiv = document.getElementById("output");
+
+      // Function to display the current date
+      function showDate() {
+        const currentDate = new Date();
+        const dateStr = currentDate.toDateString();
+        outputDiv2.textContent = `Current Date: ${dateStr}`;
+      }
+
+      // Function to display the current time
+      function showTime() {
+        const currentTime = new Date();
+        const timeStr = currentTime.toLocaleTimeString();
+        outputDiv.textContent = `Current Time: ${timeStr}`;
+      }
+
+      // Add click event listeners to the buttons
+      showDateButton.addEventListener("click", showDate);
+      showTimeButton.addEventListener("click", showTime);
+    </script>
+  </body>
+</html>

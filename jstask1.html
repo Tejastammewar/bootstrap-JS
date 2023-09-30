@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Check console!!</h3>
+    <script>
+      function reverse(number) {
+        const num = number.toString();
+        const reversedStr = num.split("").reverse().join("");
+
+        const reversedNumber = parseFloat(reversedStr);
+
+        if (number < 0) {
+          return reversedNumber * -1;
+        }
+
+        return reversedNumber;
+      }
+      const originalNumber = 32243;
+      const reversed = reverse(originalNumber);
+      console.log(reversed);
+    </script>
+  </body>
+</html>

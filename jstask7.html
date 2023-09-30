@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #title {
+      color: blue;
+    }
+    #image {
+      height: 250px;
+      width: 250px;
+      transition: transform 1s ease;
+    }
+    #start {
+      margin-left: 100px;
+    }
+    #stop {
+      margin-left: 20px;
+    }
+    .move {
+      animation: move 2s linear;
+      animation-play-state: running;
+    }
+    @keyframes move {
+      0% {
+        margin-left: 0;
+      }
+      100% {
+        margin-left: 100%;
+      }
+    }
+  </style>
+  <body>
+    <img id="image" src="train.jpg" />
+    <h3 id="title">Click the following buttons to handle animation</h3>
+    <button onclick="startanimation()" id="start">Start</button>
+    <button onclick="stopanimation()" id="stop">Stop</button>
+    <script>
+      const image = document.getElementById("image");
+      const startbutton = document.querySelector("start");
+      const stopbutton = document.querySelector("stop");
+
+      let isMoving = false;
+
+      function startanimation() {
+        if (!isMoving) {
+          isMoving = true;
+          image.classList.add("move");
+        }
+      }
+      function stopanimation() {
+        if (isMoving) {
+          isMoving = false;
+          image.classList.remove("move");
+        }
+      }
+      startbutton.addEventListener("click", startanimation);
+      stopbutton.addEventListener("click", stopanimation);
+    </script>
+  </body>
+</html>
